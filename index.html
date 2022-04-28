@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/search-box.css">
+    
+    <title>Formulário | Marmoreli</title>
+</head>
+<body>
+    <style>
+        ::-webkit-scrollbar {
+            background: rgb(255, 255, 255);
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: rgb(255, 255, 255);
+            width: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            width: 5px;
+            background: rgb(88, 88, 88);
+            border-radius: 15px;
+            height: 5px;
+        }
+    </style>
+    <header>
+        <h1 class="header-title">Cadastro de Clientes</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <label for="search-input" class="search-icon"></label>
+            <input type="search" placeholder="Consultar cliente..." class="search-input" id="search-input" required autofocus>
+        </div>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
+                    <th>Observações</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="tbody" class="recordss"></tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input id="nome" type="text" data-index="new" class="modal-field" placeholder="Nome do Cliente*" required>
+                    <input id="email" type="email" class="modal-field" placeholder="E-mail do Cliente*" required>
+                    <input id="telefone" type="text" class="modal-field" placeholder="Telefone do Cliente*" required>
+                    <input id="telefone2" type="text" class="modal-field" placeholder="Telefone 2 do Cliente">
+                    <input id="endereco" type="text" class="modal-field" placeholder="Endereco do Cliente*" required>
+                    <input id="obs" type="text" class="modal-field" placeholder="Observações" required>
+                </form>
+                <footer class="modal-footer text-footer">
+                    <p>&copy; Marmoraria Marmoreli</p>
+                    <button id="salvar" class="button green" onclick="window.location.reload()">Salvar</button>
+                    <button id="cancelar" class="button blue" onclick="closeModal()">Cancelar</button>
+                </footer>
+            </div>
+    </main>
+    <footer>
+        &copy; Marmoraria Marmoreli
+    </footer>
+    <script src="main.js" defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
